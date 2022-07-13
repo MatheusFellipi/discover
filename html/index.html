@@ -1,0 +1,248 @@
+<!-- 
+
+  elementos html possui atributos
+  -Informação extras
+  - configuração
+  ------------------------------------
+  atributos booleano
+  -nao precisam de conteúdo 
+  ex: <input type="text" disabled>
+  ------------------------------------
+  Atributos Globais
+  -class -> pode colocar vários tags com a class
+  -contenteditable -> pode editar o conteúdo mais perde a modificação
+  -data-* -> data-qualquer-nome-aqui sempre separa por traço ou tudo junto
+  -hidden -> so esconder
+  -id -> pode repelir mais nao e recomendado 
+  -styles -> e para estilizar o html nao usa na tag
+  -tabindex -> navegar por tab
+  -title -> definir um titulo
+-->
+
+<!-- elementos -->
+<h1>O título</h1>
+<!-- <h1> ate <h6> -->
+<a href=""></a>
+<!-- tag ancorar links -->
+<!-- elementos vazios -->
+
+<img src="" alt=" " />
+<!-- tag para img -->
+<input type="text" />
+<!-- entrada de texto -->
+
+<!--
+  aninhamento de tags
+
+  -fluxo -> cada tag e lida pelo o fluxo da pagina
+  -hierarquia -> 
+  -posicionamento dos elementos
+
+  elemento "p" e um elemento em block para quebrar a linha <br/>
+-->
+<p>vou <em>escrever</em> um parágrafo</p>
+<p>
+  Lorem ipsum vestibulum himenaeos ac porttitor torquent nisi pulvinar rutrum,
+  <br />curabitur ligula amet class <a href="google.com">praesent</a>
+  <strong>eu lacinia scelerisque dapibus</strong>, convallis gravida lacus
+  inceptos leo odio cras quis. senectus lacinia erat luctus suscipit turpis
+  fusce <br />convallis praesent, felis donec luctus velit consequat curabitur
+  per, nam quam odio ipsum maecenas duis erat. venenatis leo mollis arcu
+  pellentesque <br />nec at luctus proin diam convallis, nullam etiam
+  <em>commodo integer faucibus litora donec lacus viverra praesent</em>,
+  <br />vitae eu quisque scelerisque non nulla tincidunt senectus gravida.
+  mauris conubia phasellus lorem tortor nam erat primis magna, leo amet mollis
+  luctus senectus consectetur.
+</p>
+
+<p>
+  Lorem ipsum vestibulum himenaeos ac porttitor torquent nisi pulvinar rutrum,
+  <br />curabitur ligula amet class <a href="google.com">praesent</a>
+  <strong>eu lacinia scelerisque dapibus</strong>, convallis gravida lacus
+  inceptos leo odio cras quis. senectus lacinia erat luctus suscipit turpis
+  fusce <br />convallis praesent, felis donec luctus velit consequat curabitur
+  per, nam quam odio ipsum maecenas duis erat. venenatis leo mollis arcu
+  pellentesque <br />nec at luctus proin diam convallis, nullam etiam
+  <em>commodo integer faucibus litora donec lacus viverra praesent</em>,
+  <br />vitae eu quisque scelerisque non nulla tincidunt senectus gravida.
+  mauris conubia phasellus lorem tortor nam erat primis magna, leo amet mollis
+  luctus senectus consectetur.
+</p>
+
+<!--
+  conteudo do texto e 
+  caracteres reservado.
+ 
+  -&nbsp -> espacamento
+  -&lt -> >
+  &gt -> <
+  &amp -> &
+  &quot -> ""
+  &apos -> ''
+
+-->
+<p>
+  &nbsp; os espaco
+  <br />
+  que colocmos
+  <br />
+  alem das quebrar de linha sao ignorado
+</p>
+
+<!--
+  anatomia de um documento Html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<!--
+  lista de descricao
+
+-->
+<dl>
+  <dt>hi</dt>
+  <dd>um oi</dd>
+</dl>
+<!--
+  <code>
+    parte generica de codigo
+
+    <pre>
+      bloco de codigo, pois a tag manten 
+      os espaco em branco.
+
+-->
+
+<pre>
+  <code>
+    documento.querySelector("body")
+  </code>
+</pre>
+
+<!--
+  <div> block
+  <span> linha
+-->
+
+<!--
+  <table>
+    pros
+    - visualizacao de dados via linhas e colunas 
+    - boa acessibilidade para a leitura dos dados
+
+    contras 
+    - pouco flexivel 
+    - precisa de estilizar para melho vizualizacao
+
+    nao usar
+    - para criar seu layout
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th>nome</th>
+      <th>idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ue</th>
+      <th>ue</th>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+  
+  2 loja
+    quantos produtos foram produzidos ,quando vendidos e agrupado por nomes dos produtos
+    
+-->
+<table>
+  <caption>
+    protuzidos x vendidos por lojar
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" style="background-color: red" />
+    <col span="2" style="background-color: blue" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      <th colspan="2" scope="colgroup">loja 1</th>
+      <th colspan="2" scope="colgroup">loja 2</th>
+    </tr>
+    <tr>
+      <th scope="col">protuzidos</th>
+      <th scope="col">vendidos</th>
+      <th scope="col">protuzidos</th>
+      <th scope="col">vendidos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">p1</th>
+      <td>50</td>
+      <td>30</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th scope="row">p2</th>
+      <td>50</td>
+      <td>30</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+</table>
+<!-- 
+  <head>
+
+    - tag
+      - meta 
+        - <meta charset="UTF-8" /> codifica de caractere especiais
+        - <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          portabilidade para despositivo 
+        
+    Favicon
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      pode mudar no decorrer do icon no site
+
+    - metas para SEO
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="autor" content="matheus">
+      <meta name="description" content="mostra o na pesquisa do google">\
+      <meta name="robots" content="nofollow" /> // nao seque os link
+      <meta name="robots" content="follow" /> // seque os link
+      <meta name="robots" content="noindex" /> // nao index a page
+      <meta name="robots" content="noindex ,follw" /> // index a page e seque os link
+      <title>Estudos</title>
+      
+      
+      - metas rede social
+        - open Graph: facebook
+        
+        twitter
+        <meta name="twitter:title" content="rock">
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="nofollow" />
+  
+  <title>Document</title>
+</head>
